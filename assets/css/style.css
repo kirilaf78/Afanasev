@@ -68,16 +68,22 @@
   align-items: center;
   padding: 20px 15px;
   background: #FFFFFF;
-  border: 1px solid #E6E6E6;
-  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  max-width:  100%;
 
 }
 
 .header__logo {
   width: 80px;
   height: 18px;
+  padding-left: 299px;
 }
 .nav__list {}
+
+.container__nav__list {
+  padding-right: 240px;
+  
+}
 
 .nav__item {
   display: inline-block;
@@ -89,6 +95,7 @@
   letter-spacing: 1px;
   color: #48555B;
   text-transform: uppercase;
+  padding-right: 17px;
 }
 .nav__link {
   text-decoration: none;
@@ -114,7 +121,7 @@
   letter-spacing: 2.3px;
   color: #48555B;
   text-transform: uppercase;
-
+  
 }
 .h2__story__text {}
 
@@ -154,7 +161,7 @@
 .story__img {
   width: 50%;
   display: flex;
-
+  padding-left: 14px
 }
 .story__img__webuild {
   padding-left: 10px;
@@ -213,9 +220,7 @@
   color: #48555B;
 
 }
-.capabilities__top__content__btn {
-  margin-right: 22px;
-}
+.capabilities__top__content__btn {}
  
 .capabilities__btn {
   font-family: Open Sans;
