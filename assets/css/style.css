@@ -1,22 +1,32 @@
+/* в целом по стилям более заморочный вариант, 
+НО направление везде верное, после прослушивания мин инфо
+по адаптиву думаю понятно где нужно поменять) */
 * {
   box-sizing: border-box;
  }
  .header{
   
 }
-
+/* с контейнером все ок  */
 .container {
   width: 1468px;
   margin: 0 auto;
   padding: 0 15px;
   
 }
+
 .header__text {
   display: flex;
   flex-direction: column;
-  width: auto ;
+  /* элемент лежит в контейнере, ширина не нужна */
+  /* width: auto ; */
   align-items: center;
-  height: 769px;
+  /* если добавить justify-content: space-between
+  элементы как раз выстроятся/разлетятся как нужно
+   */
+  /* лучше 100vh */
+  /* height: 769px; */
+  height: 100vh;
   background-image: url(../img/header_img.svg);
   background-position: center;
  
@@ -25,7 +35,11 @@
   padding: 20px;
 }
 .text__main {
-  padding-top: 307px;
+  /* отключаем, позиционировать лучше более гибко,
+  чтобы при изменении высоты контент подстроился  */
+  /* padding-top: 307px; */
+  /* не вижу подключения такого шрифта,
+  почему используем? */
   font-family: BebasNeueBold;
   font-size: 32px;
   line-height: 70px;
@@ -36,7 +50,7 @@
 }
 .text__undermain {
   padding-top: 15px;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -44,8 +58,10 @@
   color: #FFFFFF;
 }
 .text__bottom{
-  padding-top: 200px ;
-  font-family: Open Sans;
+  /* отключаем, позиционировать лучше более гибко,
+  чтобы при изменении высоты контент подстроился  */
+  /* padding-top: 200px ; */
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -76,12 +92,14 @@
 .header__logo {
   width: 80px;
   height: 18px;
-  padding-left: 299px;
+  /* убираем, изменяем ширину контейнера  */
+  /* padding-left: 299px; */
 }
 .nav__list {}
 
 .container__nav__list {
-  padding-right: 240px;
+  /* убираем, изменяем ширину контейнера  */
+  /* padding-right: 240px; */
   
 }
 
@@ -95,6 +113,7 @@
   letter-spacing: 1px;
   color: #48555B;
   text-transform: uppercase;
+  /* последнему эл-ту в списке отступ справа не нужен  */
   padding-right: 17px;
 }
 .nav__link {
@@ -131,7 +150,8 @@
 
 .story__description {
   width: 50%;
-  padding-left: 212px;
+  /* убираем, уменьшаем контейнер */
+  /* padding-left: 212px; */
 }
 .story__description__part1 {
   font-family: Open Sans;
@@ -141,8 +161,10 @@
   line-height: 27px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  padding-left: 111px;
-  padding-right: 39px;
+  
+  /* убираем, уменьшаем контейнер */
+  /* padding-left: 111px; */
+  /* padding-right: 39px; */
 }
 
 .story__description__part2 {
@@ -153,8 +175,10 @@
   line-height: 23px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  padding-left: 111px;
-  padding-right: 59px;
+  
+  /* убираем, уменьшаем контейнер */
+  /* padding-left: 111px; */
+  /* padding-right: 59px; */
   padding-top: 5px;
 }
 
@@ -163,26 +187,31 @@
   display: flex;
   padding-left: 14px
 }
-.story__img__webuild {
+/* дублирование стилей */
+/* .story__img__webuild {
   padding-left: 10px;
 
 }
 .story__img__wemanage {
   padding-left: 10px;
-}
+} */
 
 .img__weplan {
-  width: 125px;
-  height: 220px;
+  /* убираем картинка должна встроиться по ширине блока обертки */
+  /* width: 125px; */
+  /* height: 220px; */
+  width: 100%;
+  max-width: 100%;
 }
-.img__webuild {
+/* дублирование стилей */
+/* .img__webuild {
   width: 125px;
   height: 220px;
 }
 .img__wemanage {
   width: 125px;
   height: 220px;
-}
+} */
 .capabilities {
   padding-top: 35px;
 }
