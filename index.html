@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- какое-то странное подключение, что оно подключает ^_^ ? -->
   <link rel="stylesheet" href="./assets/fonts/">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -12,13 +13,18 @@
 
 </head>
 <body>
+
+  <!-- нужны 2 внешних блока с контейнерами, чтобы они тянулись на
+  весь монитор и один был с фоном. другой с рамкой наа нижней границе -->
   <header class="header">
     <div class="container">
-      <div class="header__text">
+      <div class="header__text"><!-- имелся ввиду блок text, а не элемент блока header? -->
 
-        <div class="text__logo">
+        <div class="text__logo"> <!-- элемент блока text, но где блок text?--> 
           <img src="./assets/img/terms_logo.png" alt="logo">
         </div>
+        <!-- этот и след блок визуально в 1 группе
+        легче позиционировать если добавить общую обертку -->
         <div class="text__main">
           <p>PARTNER WITH KONSTRUCT</p>
         </div>
@@ -26,55 +32,52 @@
           <p>An award-winning construction management firm</p>
         </div>
         <div class="text__bottom">
-          <a class="bottom__link" href="#">SCROLL DOWN</a>
+          <a class="bottom__link" href="#">SCROLL DOWN</a><!--эл-т блока bottom, блока нет такого?-->
         </div>
 
       </div>
     
-        <div class="header__nav">
-              
-                <div class="header__logo">
-                  <img class="logo__img" src="./assets/img/logo.png" alt="logo">
-                </div>
-                <nav>
-                  <div class="container__nav__list">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                          <a class="nav__link" href="#">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link active" href="#">About</a>
-                        </li>
-                        <li class="nav__item">
-                              <a class="nav__link" href="#">Services</a>
-                        </li>
-                        <li class="nav__item">
-                              <a class="nav__link" href="#">Work</a>
-                        </li>
-                        <li class="nav__item">
-                              <a class="nav__link" href="#">Contact</a>
-                          </li>
-                     </ul>
-                  </div>
-                  
+      <div class="header__nav">
+            
+        <div class="header__logo">
+          <img class="logo__img" src="./assets/img/logo.png" alt="logo">
+        </div>
+        <nav><!-- здесь хочется добавить имя блока nav-->
+          <div class="container__nav__list"><!--элемент элемента так нельзя именовать-->
+            <ul class="nav__list"><!--есть эл-ты блока nav но нет такого блока по БЭМ-->
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link active" href="#">About</a>
+                </li>
+                <li class="nav__item">
+                      <a class="nav__link" href="#">Services</a>
+                </li>
+                <li class="nav__item">
+                      <a class="nav__link" href="#">Work</a>
+                </li>
+                <li class="nav__item">
+                      <a class="nav__link" href="#">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          
+        </nav>
 
-                </nav>
+      </div>
 
-                </div>
-
-      
-     
-     </div>
+    </div>
 
   </header>
   <div class="container">
     <section class="story">
       
-        <div class="h2__story" >
-          <h2 class="h2__story__text">Our story</h2>
+        <div class="h2__story" ><!--эл-т блока h2, а сам блок где?-->
+          <h2 class="h2__story__text">Our story</h2><!--нельзя так именовать/эл-т элемента, далее тоже-->
         </div>
         <div class="story__content">
-          <div class="story__description">
+          <div class="story__description"><!--эл-т блока story, а сам блок где?-->
             <div  class="story__description__part1" >
             <p>Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm</p>
           </div>
@@ -84,16 +87,22 @@
         </div>
 
           <div class="story__img">
-            <div class="story__img__weplan">
+            <!-- блок №1, 2, 3 одинаковые по стилям, нужно назвать одинаково -->
+            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
               <img class="img__weplan" src="./assets/img/weplan.png" alt="image">
             </div>
-            <div class="story__img__webuild">
-              <img class="img__webuild" src="./assets/img/webuild.png" alt="image">
+            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
+              <img class="img__weplan" src="./assets/img/webuild.png" alt="image">
             </div>
-            <div class="story__img__wemanage">
-              <img class="img__wemanage"  src="./assets/img/wemanage.png" alt="image">
-
+            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
+              <img class="img__weplan" src="./assets/img/wemanage.png" alt="image">
             </div>
+            <!-- <div class="story__img__webuild"> -->
+              <!-- <img class="img__webuild" src="./assets/img/webuild.png" alt="image"> -->
+            <!-- </div> -->
+            <!-- <div class="story__img__wemanage"> -->
+              <!-- <img class="img__wemanage"  src="./assets/img/wemanage.png" alt="image"> -->
+            <!-- </div> -->
 
           </div>
 
@@ -101,7 +110,10 @@
 
       
     </section>
-
+<!-- 1) далее аналогичные ошибки в именовании по БЭМ,
+   2)контейнер нужно уменьшить
+  3) убрать после этого лишние отступы слева справа у блоков
+4) повторяющиеся блоки именовать одинаково, чтобы не дублировать стили -->
     <section class="capabilities" >
       <div class="container">
         <div class="capabilities__top">
@@ -171,7 +183,7 @@
   <section class="intouch">
 
    <div class="container">
-    
+    <!-- лучше фоном и дальше убрать absolute -->
       <img class="intouch__img" src="./assets/img/bg.png" alt="image">
       
       <div class="intouch__content__h2">
