@@ -4,18 +4,25 @@
 * {
   box-sizing: border-box;
  }
- .header{
-  
-}
+ 
+
 /* с контейнером все ок  */
 .container {
   width: 1468px;
   margin: 0 auto;
   padding: 0 15px;
   
+  
+}
+.background {
+  max-width: 100vw;
+  max-height: 100vh;
+  background-image: url(../img/header_img.svg);
+  background-position: center;
+  background-size: cover;
 }
 
-.header__text {
+.text {
   display: flex;
   flex-direction: column;
   /* элемент лежит в контейнере, ширина не нужна */
@@ -24,23 +31,26 @@
   /* если добавить justify-content: space-between
   элементы как раз выстроятся/разлетятся как нужно
    */
+   justify-content: space-between;
   /* лучше 100vh */
   /* height: 769px; */
   height: 100vh;
-  background-image: url(../img/header_img.svg);
-  background-position: center;
+   
  
 }
 .text__logo {
   padding: 20px;
 }
-.text__main {
+.text__center {
+  text-align: center;
+}
+.main {
   /* отключаем, позиционировать лучше более гибко,
   чтобы при изменении высоты контент подстроился  */
   /* padding-top: 307px; */
   /* не вижу подключения такого шрифта,
   почему используем? */
-  font-family: BebasNeueBold;
+  font-family: Open Sans;
   font-size: 32px;
   line-height: 70px;
   letter-spacing: 5.7px;
@@ -48,8 +58,7 @@
 
 
 }
-.text__undermain {
-  padding-top: 15px;
+.undermain {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
@@ -68,28 +77,28 @@
   line-height: 15px;
   letter-spacing: 3.7px;
 } 
-.bottom__link {
+.text__link {
   color: #FFFFFF;
   text-decoration: none;
 }
-.bottom__link :hover,
-.bottom__link :focus {
+.text__link :hover,
+.text__link :focus {
   color: #00A4E5;
 }
 
 
-.header__nav {
+.nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 20px 15px;
+  padding: 15px 15px;
   background: #FFFFFF;
   border-bottom: 1px solid #E6E6E6;
   max-width:  100%;
 
 }
 
-.header__logo {
+.nav__logo {
   width: 80px;
   height: 18px;
   /* убираем, изменяем ширину контейнера  */
@@ -97,13 +106,13 @@
 }
 .nav__list {}
 
-.container__nav__list {
+.nav__list {
   /* убираем, изменяем ширину контейнера  */
   /* padding-right: 240px; */
   
 }
 
-.nav__item {
+.item {
   display: inline-block;
   font-family: Open Sans;
   font-style: normal;
@@ -116,20 +125,19 @@
   /* последнему эл-ту в списке отступ справа не нужен  */
   padding-right: 17px;
 }
-.nav__link {
+.item__link {
   text-decoration: none;
 }
-.nav__link.active,
-.nav__link:hover,
-.nav__link:focus {
+.item__link.active,
+.item__link:hover,
+.item__link:focus {
   color: #00A4E5;
   transition: color ease 0.3c;
   
 }
 
-.story{}
 
-.h2__story {
+.h2 {
   padding: 32px;
   text-align: center;
   font-family: Open Sans;
@@ -142,18 +150,19 @@
   text-transform: uppercase;
   
 }
-.h2__story__text {}
+.h2__text {}
 
-.story__content {
+.story{
   display: flex;
+  justify-content: center;
 }
 
 .story__description {
-  width: 50%;
+  width: 24%;
   /* убираем, уменьшаем контейнер */
   /* padding-left: 212px; */
 }
-.story__description__part1 {
+.description1 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -167,7 +176,7 @@
   /* padding-right: 39px; */
 }
 
-.story__description__part2 {
+.description2 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -182,10 +191,11 @@
   padding-top: 5px;
 }
 
-.story__img {
-  width: 50%;
+.middle__img {
+  width: 30%;
   display: flex;
-  padding-left: 14px
+  padding-top: 20px;
+  
 }
 /* дублирование стилей */
 /* .story__img__webuild {
@@ -196,12 +206,13 @@
   padding-left: 10px;
 } */
 
-.img__weplan {
+.weplan__img {
   /* убираем картинка должна встроиться по ширине блока обертки */
   /* width: 125px; */
   /* height: 220px; */
   width: 100%;
   max-width: 100%;
+  padding-left: 20px;
 }
 /* дублирование стилей */
 /* .img__webuild {
@@ -215,18 +226,18 @@
 .capabilities {
   padding-top: 35px;
 }
-.capabilities__container {
-  padding-left: 111px;
-  padding-right: 100px ;
+.container2 {
+  margin: 0 325px;
 }
+
 .capabilities__top {
   display: flex;
   justify-content: space-between;
-  margin: 0 320px;
+ 
 }
-.capabilities__top_h2 {
-  width: 341px;
-  text-align: center;
+.top1 {
+  width: 35%;
+  text-align: left;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -236,9 +247,8 @@
   color: #48555B;
   text-transform: uppercase;
 }
-.capabilities__top__content {
-  margin: 0 27px 0 129px;
-  padding: 0 20px 0 20px;
+.top2 {
+  width: 42%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -249,9 +259,9 @@
   color: #48555B;
 
 }
-.capabilities__top__content__btn {}
+.btn1 {}
  
-.capabilities__btn {
+.btn1__btn {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -261,165 +271,88 @@
   letter-spacing: 0.5px;
   color: #FFFFFF;
   background-color: #00A4E5;
-  width: 105px;
   border: none;
   text-transform: uppercase;
+  height: 100%;
 }
 
 .capabilities__bottom {
 display: flex;
 padding: 60px 0 0 0 ;
 justify-content: space-between;
-margin: 0 320px;
 
 }
 
-.capabilities__bottom__block1 {
+.block {
   border: 1px solid rgba(192,192,192,0.6);
   margin-right: 10px;
   padding-left: 10px;
   padding-top: 10px;
+  width: 33.33%;
+}
+.block__img {}
+
+.block__h3 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.426667px;
+  color: #48555B;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.block__text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.1875px;
+  color: #48555B;
+  padding-top: 10px;
+
+  }
+  
+
+.intouch {}
+
+
+.background1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(../img/bg.png);
+  background-position: center;
+  background-size: cover;
   
 }
 
-.img__block1 {
-  width: 60px;
-  height: 60px;
-}
-.block1__h3 {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.426667px;
-  color: #48555B;
-  text-transform: uppercase;
-  text-align: left;
-  margin-top: 20px;
-}
-
-.block1__text {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 23px;
-  letter-spacing: 0.1875px;
-  color: #48555B;
-  padding-top: 10px;
-
-  }
-  .capabilities__bottom__block2 {
-    border: 1px solid rgba(192,192,192,0.6);
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-  }
-
-.img__block2 {
-  width: 60px;
-  height: 60px;
-}
-.block2__h3 {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.426667px;
-  color: #48555B;
-  text-transform: uppercase;
-  text-align: left;
-  margin-top: 20px;
-
-}
-.block2__text {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 23px;
-  letter-spacing: 0.1875px;
-  color: #48555B;
-  padding-top: 10px;
-
-  }
 
 
-
-
-
-.capabilities__bottom__block3 {
-  border: 1px solid rgba(192,192,192,0.6);
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.img__block3 {
-  width: 60px;
-  height: 60px;
-}
-.block3__h3 {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.426667px;
-  color: #48555B;
-  text-transform: uppercase;
-  text-align: left;
-  margin-top: 20px;
-
-}
-
-.block3__text {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 23px;
-  letter-spacing: 0.1875px;
-  color: #48555B;
-  padding-top: 10px;
-}
-
-.intouch {
-  position: relative;
-}
-
-.intouch__content__img {
-   max-width: 1468px;
-}
-
-.intouch__img {
- max-width: 100%;
-}
-
-.intouch__content__h2 {
+.background1__h2 {
   text-align: center;
-  position: absolute;
-  bottom: 325px;
-  left: 683px;
-  z-index: +1;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.15px;
-  width: 275px;
   color: #48555B;
+  width: 23vw;
+  height: 26vh;
 }
-.intouch__content__btn {
+.background1__btn {
   text-align: center;
-  position: absolute;
-  z-index: +1;
-  bottom: 281px;
-  left: 768px;
+  height: 21vh;
+   
 }
-.intouch__btn {
+.btn2 {
   background-color: #00A4E5;
   font-family: Open Sans;
   font-style: normal;
@@ -431,20 +364,23 @@ margin: 0 320px;
   color: #FFFFFF;
   text-transform: uppercase;
   border: none;
+  height: 7vh;
+  width: 10vw;
 }
-.newsletter__container {}
 
-.newsletter__content {
+.newsletter {}
+
+.content {
   background-color: #171819;
   max-width: 100%;
-  height: 60px;
-  margin-top: -2px;
+  height: 17vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -2px;
 
 }
-.newsletter__content__h3 {
+.content__h3 {
 
   font-family: Open Sans;
   font-style: normal;
@@ -454,16 +390,15 @@ margin: 0 320px;
   text-align: center;
   letter-spacing: 0.846154px;
   color: #FFFFFF;
-  margin-right: 172px;
-  height: 25px;
+  width: 15vw;
 
-}
-.newsletter__input {
-  height: 25px;
+  }
+.content__input {
+  height: 6vh;
   display: flex;
   align-items: center;
 }
-.newsletter__email {
+.email1 {
   height: 100%;
   font-family: Open Sans;
   font-size: 14px;
@@ -472,12 +407,11 @@ margin: 0 320px;
   line-height: 19px;
   letter-spacing: 0.07000000029802322px;
   text-align: left;
-  padding-left: 5px;
-
+  
 }
 
 
-.newsletter__signup {
+.signup1 {
   background-color: #00A4E5;
   font-family: Open Sans;
   font-style: normal;
@@ -490,26 +424,25 @@ margin: 0 320px;
   text-transform: uppercase;
   border: none;
   height: 100%;
-  width: 100px;
-  margin-left: -5px;
+  width: 10vw;
+  margin-left: -2px;
 }
 
-.terms__container {
+.content1 {
   max-width: 100%;
-  height: 180px;
+  height: 40vh;
   background-color: #141A20;
   display: flex;
   padding-top: 20px;
-
+  align-items: center;
+  justify-content: space-around;
 }
-.terms__container__company {
+.content1__logo {
   color: #fff;
-  width: 313px;
-  padding-left: 20px;
-  margin-left: 186px;
-
+  margin-left: 13vw;
+  
 }
-.terms__container__company__text1 {
+.text1 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -520,17 +453,16 @@ margin: 0 320px;
   margin-bottom: 10px;
 }
 
-.terms__container__company__logo {
+.logo1 {
   color: #fff;
   margin-bottom: 10px;
 }
 
-.terms__company__logo {
-  width: 101.62px;
-  height: 23px;
+.logo1__logo {
+ 
 }
 
-.terms__container__company__text2{
+.text2{
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -538,11 +470,11 @@ margin: 0 320px;
   line-height: 19px;
   align-items: center;
   letter-spacing: 0.85px;
-  padding-right: 75px;
+  width: 17.5vw;
 
 }
 
-.terms__container__links {
+.content1__links {
   display: flex;
   color: #fff;
   justify-content: space-between;
@@ -553,27 +485,42 @@ margin: 0 320px;
   font-size: 9px;
   line-height: 25px;
   letter-spacing: 0.846154px;
-  margin-left: 85px;
+  justify-content: space-around;
+  width: 53vw;
+  
+  
+  }
+  .group1 {
+   
   }
 
-  .terms__container__links2 {
-    padding-top: 25px;
-  }
-  .terms__container__links3 {
+.group1__link :hover,
+.group1__link :focus {
+  color: #00A4E5;
+}
+
+.group1__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+  .group2 {
+    padding-top: 6vh;
+      }
+
+  .group3 {
     margin-left: 15px;
-    padding-top: 25px;
+    padding-top: 6vh;
   }
 
-  .terms__container__links4 {
-    margin-left: 15px;
-  }
-  .terms__container__links5 {
-    margin-left: 15px;
-    width: 180px;
+    .group4 {
+    margin-left: ;
+    width: 17vw ;
+    font-weight: 400;
   }
   .footer__container {
     max-width: 100%;
-    height: 60px;
+    height: 15vh;
     background: #171819;
     font-family: Open Sans;
     font-style: normal;
@@ -587,13 +534,21 @@ margin: 0 320px;
 
   }
   .footer__text {
-    padding: 25px 0 0 0;
-
+    text-align: center;
+    padding-top: 7vh;
   }
 
+  .group5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16vh
+  }
   
-
-
+  .group5__icon {
+    width: 2vw;
+    
+  }
 
 
 

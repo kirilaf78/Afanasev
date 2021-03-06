@@ -16,86 +16,94 @@
 
   <!-- нужны 2 внешних блока с контейнерами, чтобы они тянулись на
   весь монитор и один был с фоном. другой с рамкой наа нижней границе -->
-  <header class="header">
+  
+    <div class="header">
     <div class="container">
-      <div class="header__text"><!-- имелся ввиду блок text, а не элемент блока header? -->
+      <div class="background">
+      <div class="text"><!-- имелся ввиду блок text, а не элемент блока header? -->
 
         <div class="text__logo"> <!-- элемент блока text, но где блок text?--> 
           <img src="./assets/img/terms_logo.png" alt="logo">
         </div>
         <!-- этот и след блок визуально в 1 группе
         легче позиционировать если добавить общую обертку -->
-        <div class="text__main">
-          <p>PARTNER WITH KONSTRUCT</p>
-        </div>
-        <div class="text__undermain">
-          <p>An award-winning construction management firm</p>
+        <div class="text__center">
+          <div class="main">
+            <p>PARTNER WITH KONSTRUCT</p>
+          </div>
+          <div class="undermain">
+            <p>An award-winning construction management firm</p>
+          </div>
         </div>
         <div class="text__bottom">
-          <a class="bottom__link" href="#">SCROLL DOWN</a><!--эл-т блока bottom, блока нет такого?-->
+          <a class="text__link" href="#">SCROLL DOWN</a><!--эл-т блока bottom, блока нет такого?-->
         </div>
-
+        
       </div>
-    
-      <div class="header__nav">
-            
-        <div class="header__logo">
-          <img class="logo__img" src="./assets/img/logo.png" alt="logo">
-        </div>
-        <nav><!-- здесь хочется добавить имя блока nav-->
-          <div class="container__nav__list"><!--элемент элемента так нельзя именовать-->
-            <ul class="nav__list"><!--есть эл-ты блока nav но нет такого блока по БЭМ-->
-                <li class="nav__item">
-                  <a class="nav__link" href="#">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link active" href="#">About</a>
-                </li>
-                <li class="nav__item">
-                      <a class="nav__link" href="#">Services</a>
-                </li>
-                <li class="nav__item">
-                      <a class="nav__link" href="#">Work</a>
-                </li>
-                <li class="nav__item">
-                      <a class="nav__link" href="#">Contact</a>
-                  </li>
-              </ul>
-          </div>
-          
-        </nav>
-
       </div>
-
+      </div>
     </div>
 
-  </header>
+  
+          <div class="container">  
+            <div class="nav">       
+              <div class="nav__logo">
+                <img class="logo__img" src="./assets/img/logo.png" alt="logo">
+              </div>
+              
+                <div class="nav__list"><!--элемент элемента так нельзя именовать-->
+                  <ul class="list"><!--есть эл-ты блока nav но нет такого блока по БЭМ-->
+                      <li class="item">
+                        <a class="item__link" href="#">Home</a>
+                      </li>
+                      <li class="item">
+                          <a class="item__link active" href="#">About</a>
+                      </li>
+                      <li class="item">
+                            <a class="item__link" href="#">Services</a>
+                      </li>
+                      <li class="item">
+                            <a class="item__link" href="#">Work</a>
+                      </li>
+                      <li class="item">
+                            <a class="item__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            
+            </div>
+
+          </div>
+
+    
+    
+ 
   <div class="container">
-    <section class="story">
-      
-        <div class="h2__story" ><!--эл-т блока h2, а сам блок где?-->
-          <h2 class="h2__story__text">Our story</h2><!--нельзя так именовать/эл-т элемента, далее тоже-->
+          
+        <div class="h2" ><!--эл-т блока h2, а сам блок где?-->
+          <h2 class="h2__text">Our story</h2><!--нельзя так именовать/эл-т элемента, далее тоже-->
         </div>
-        <div class="story__content">
+        <div class="story">
           <div class="story__description"><!--эл-т блока story, а сам блок где?-->
-            <div  class="story__description__part1" >
+            <div  class="description1" >
             <p>Founded in 2011 by John Mathew Smith, Konstruct has become the number one construction management firm</p>
           </div>
-          <div class="story__description__part2">
+          <div class="description2">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
           </div>
         </div>
 
-          <div class="story__img">
+          <div class="middle__img">
             <!-- блок №1, 2, 3 одинаковые по стилям, нужно назвать одинаково -->
-            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
-              <img class="img__weplan" src="./assets/img/weplan.png" alt="image">
+            <div class="weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
+              <img class="weplan__img" src="./assets/img/weplan.png" alt="image">
             </div>
-            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
-              <img class="img__weplan" src="./assets/img/webuild.png" alt="image">
+            <div class="weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
+              <img class="weplan__img" src="./assets/img/webuild.png" alt="image">
             </div>
-            <div class="story__img__weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
-              <img class="img__weplan" src="./assets/img/wemanage.png" alt="image">
+            <div class="weplan"><!--нельзя так именовать/эл-т элемента, далее тоже-->
+              <img class="weplan__img" src="./assets/img/wemanage.png" alt="image">
             </div>
             <!-- <div class="story__img__webuild"> -->
               <!-- <img class="img__webuild" src="./assets/img/webuild.png" alt="image"> -->
@@ -106,27 +114,27 @@
 
           </div>
 
-        </div>
+        
 
       
-    </section>
+      </div>
 <!-- 1) далее аналогичные ошибки в именовании по БЭМ,
    2)контейнер нужно уменьшить
   3) убрать после этого лишние отступы слева справа у блоков
 4) повторяющиеся блоки именовать одинаково, чтобы не дублировать стили -->
     <section class="capabilities" >
-      <div class="container">
+      <div class="container2">
         <div class="capabilities__top">
-          <div class="capabilities__top_h2">
+          <div class="top1">
             <h2>Our capabilities</h2>
           </div>
-          <div class="capabilities__top__content">
+          <div class="top2">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
 
           </div>
-          <div class="capabilities__top__content__btn">
+          <div class="btn1">
 
-            <a href="#"><button class="capabilities__btn">All Services</button></a>
+            <a href="#"><button class="btn1__btn">All Services</button></a>
 
           </div>
 
@@ -134,39 +142,39 @@
 
         <div class="capabilities__bottom">
 
-          <div class="capabilities__bottom__block1">
-            <div class="block1__img">
-              <img class="img__block1" src="./assets/img/bottom_block1.png" alt="image">
+          <div class="block">
+            <div class="block__img">
+              <img  src="./assets/img/bottom_block1.png" alt="image">
             </div>
-            <div class="block1__h3" >
+            <div class="block__h3" >
               <h3>Project and construction management</h3> 
             </div>
-            <div class="block1__text">
+            <div class="block__text">
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
             </div>
           </div>
 
-          <div class="capabilities__bottom__block2">
-            <div class="block2__img">
-              <img class="img__block2" src="./assets/img/bottom_block2.png" alt="image">
+          <div class="block">
+            <div class="block__img">
+              <img  src="./assets/img/bottom_block2.png" alt="image">
             </div>
-            <div class="block2__h3" >
+            <div class="block__h3" >
               <h3>Structure audit and maintenance</h3> 
             </div>
-            <div class="block2__text">
+            <div class="block__text">
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
             </div>
 
           </div>
 
-          <div class="capabilities__bottom__block3">
-            <div class="block3__img">
-              <img class="img__block3" src="./assets/img/bottom_block3.png" alt="image">
+          <div class="block">
+            <div class="block">
+              <img src="./assets/img/bottom_block3.png" alt="image">
             </div>
-            <div class="block3__h3" >
+            <div class="block__h3" >
               <h3>Factory construction and modeling</h3> 
             </div>
-            <div class="block3__text">
+            <div class="block__text">
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
             </div>
           </div>
@@ -180,35 +188,36 @@
 
   </div>
 
-  <section class="intouch">
+  
 
    <div class="container">
+     <div class="background1">
     <!-- лучше фоном и дальше убрать absolute -->
-      <img class="intouch__img" src="./assets/img/bg.png" alt="image">
+     <!-- <img class="intouch__img" src="./assets/img/bg.png" alt="image">-->
       
-      <div class="intouch__content__h2">
+      <div class="background1__h2">
         <h2>Want to build something amazing?</h2>
       </div>
-      <div class="intouch__content__btn"  >
+      <div class="background1__btn"  >
         <a href="#">
-           <button class="intouch__btn">Get in touch</button>
+           <button class="btn2">Get in touch</button>
           </a>
       </div>
     
-    </div>
+     </div>
+  </div>
 
-  </section>
   <section class="newsletter">
     <div class="container">
-      <div class="newsletter__content">
-        <div class="newsletter__content__h3">
+      <div class="content">
+        <div class="content__h3">
           <h3>Newsletter Sign up</h3>
         </div>
         <div>
           <form action="#">
-            <div class="newsletter__input">
-             <input class="newsletter__email" type="email"  value="test@youremail.com" name="login">
-             <input class="newsletter__signup" type="submit" value="Signup">
+            <div class="content__input">
+             <input class="email1" type="email"  value="test@youremail.com" name="login">
+             <input class="signup1" type="submit" value="Signup">
             </div>
             </form>
         </div>
@@ -219,51 +228,46 @@
 
   <div class="terms">
     <div class="container">
-    <div class="terms__container">
-      <div class="terms__container__company">
-        <p class="terms__container__company__text1">Company</p>
-        <div class="terms__container__company__logo">
-          <img class="terms__company__logo" src="./assets/img/terms_logo.png" alt="logo">
-        </div>
-        
-        <p class="terms__container__company__text2" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
+      <div class="content1">
+
+        <div class="content1__logo">
+          <p class="text1">Company</p>
+          <div class="logo1">
+             <img class="logo1__logo" src="./assets/img/terms_logo.png" alt="logo">
+          </div>
+          
+          <p class="text2" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
       </div>
 
-      <div class="terms__container__links">
+      <div class="content1__links">
 
-        <div class="terms__container__links1">
-          <p>Links</p>
-          <p>Home</p>
-          <p>About</p>
-          <p>Services</p>
-          <p>Projects</p>
-          <p>Contact us</p>
-        </div>
-
-        <div class="terms__container__links2">
+        <div class="group1">
+          <a class="group1__link" href="#"><p>Links</p></a>
+          <a class="group1__link" href="#"><p>Home</p></a>
+          <a class="group1__link" href="#"><p>About</p></a>
+          <a class="group1__link" href="#"><p>Services</p></a>
+          <a class="group1__link" href="#"><p>Projects</p></a>
+          <a class="group1__link" href="#"><p>Contact us</p></a>
           
-          <p>Fqa</p>
-          <p>Terms</p>
-          <p>Careers</p>
+          </div>
 
-        </div>
-
-        <div class="terms__container__links3">
-          
-          <p>Blog</p>
-          <p>Partners</p>
-          <p>News</p>
-
-        </div>
-
-        <div class="terms__container__links4">
-          <p></p>
-          <p></p>
-          <p></p>
+        <div class="group2">
+          <a class="group1__link" href="#"><p>Fqa</p></a>
+          <a class="group1__link" href="#"><p>Terms</p></a>
+          <a class="group1__link" href="#"><p>Careers</p></a>
           
         </div>
 
-        <div class="terms__container__links5">
+        <div class="group3">
+
+          <a class="group1__link" href="#"><p>Blog</p></a>
+          <a class="group1__link" href="#"><p>Partners</p></a>
+          <a class="group1__link" href="#"><p>News</p></a>
+                    
+        </div>
+
+        
+        <div class="group4">
 
           <p>Contact us</p>
           <p>213 Baker Street Oriel City Kounty7000 KNW,Kountry Name </p>
@@ -271,14 +275,29 @@
           <p>info@konstruct.com</p>
           
         </div>
+        <div class="group5">
+
+          <div class="group5__icon">
+            <img src="./assets/img/f.png" alt="icon">
+          </div>
+
+          <div class="group5__icon">
+            <img src="./assets/img/twitter.png" alt="icon">
+          </div>
+
+          <div class="group5__icon">
+            <img src="./assets/img/G.png" alt="icon">
+          </div>
+
+        </div>
+
+
       </div>
-      <div>
-      </div>
-      <div>
-      </div>
+      
+      
+     </div>
     </div>
-  </div>
-  </div>
+ </div>
   <div class="footer">
     <div class="container">
       <div class="footer__container">
