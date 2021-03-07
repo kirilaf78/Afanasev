@@ -1,63 +1,75 @@
-/* в целом по стилям более заморочный вариант, 
-НО направление везде верное, после прослушивания мин инфо
-по адаптиву думаю понятно где нужно поменять) */
 * {
   box-sizing: border-box;
  }
- 
 
-/* с контейнером все ок  */
+/* #2
+1) решить проблему с шрифтом, сейчас не подключается
+2) http://prntscr.com/10ei6pg
+- основной контейнер в который вписывается контент
+940px
+ */
 .container {
-  width: 1468px;
+  /* #2
+  меняем контейнер
+  */
+  /*width: 1468px;*/
+  width: 940px;
   margin: 0 auto;
   padding: 0 15px;
-  
-  
 }
-.background {
-  max-width: 100vw;
-  max-height: 100vh;
-  background-image: url(../img/header_img.svg);
+/* #2
+фоновая картинка должна тянуться на всю ширину экрана,
+не должна быть внутри контейнера,
+переносим с background на header
+ */
+.header {
+  background-image: url("../img/header_img.svg");
   background-position: center;
   background-size: cover;
 }
 
+/*
+.background {
+  max-width: 100vw;
+  max-height: 100vh;
+  background-image: url("../img/header_img.svg");
+  background-position: center;
+  background-size: cover;
+}
+*/
+
 .text {
   display: flex;
   flex-direction: column;
-  /* элемент лежит в контейнере, ширина не нужна */
-  /* width: auto ; */
   align-items: center;
-  /* если добавить justify-content: space-between
-  элементы как раз выстроятся/разлетятся как нужно
-   */
-   justify-content: space-between;
-  /* лучше 100vh */
-  /* height: 769px; */
+  justify-content: space-between;
   height: 100vh;
-   
- 
+  /* #2
+  сюда удобно добавить внутренние отступы,
+  чтобы внутренние элементы не прилипали к краям
+  */
+  padding: 5vh 0;
 }
+
 .text__logo {
-  padding: 20px;
+  /* #2
+  здесь тогда можно убрать
+  */
+  /*padding: 20px;*/
 }
+
 .text__center {
   text-align: center;
 }
+
 .main {
-  /* отключаем, позиционировать лучше более гибко,
-  чтобы при изменении высоты контент подстроился  */
-  /* padding-top: 307px; */
-  /* не вижу подключения такого шрифта,
-  почему используем? */
   font-family: Open Sans;
   font-size: 32px;
   line-height: 70px;
   letter-spacing: 5.7px;
   color: #FFFFFF;
-
-
 }
+
 .undermain {
   font-family: 'Open Sans';
   font-style: normal;
@@ -66,10 +78,8 @@
   line-height: 22px;
   color: #FFFFFF;
 }
+
 .text__bottom{
-  /* отключаем, позиционировать лучше более гибко,
-  чтобы при изменении высоты контент подстроился  */
-  /* padding-top: 200px ; */
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
@@ -86,31 +96,34 @@
   color: #00A4E5;
 }
 
+/* #2 переносим рамку сюда */
+.nav-wrap {
+  border-bottom: 1px solid #E6E6E6;
+}
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   align-items: center;
-  padding: 15px 15px;
+  /*padding: 15px 15px;*/
   background: #FFFFFF;
-  border-bottom: 1px solid #E6E6E6;
+  /*border-bottom: 1px solid #E6E6E6;*/
   max-width:  100%;
+  /* #2
+  контейнер изменили на 940 и контент тянется на
+   всю эту ширину
+   */
+  justify-content: space-between;
+  padding: 15px 0;
 
 }
 
 .nav__logo {
   width: 80px;
   height: 18px;
-  /* убираем, изменяем ширину контейнера  */
-  /* padding-left: 299px; */
 }
-.nav__list {}
 
-.nav__list {
-  /* убираем, изменяем ширину контейнера  */
-  /* padding-right: 240px; */
-  
-}
+.nav__list {}
 
 .item {
   display: inline-block;
@@ -125,9 +138,17 @@
   /* последнему эл-ту в списке отступ справа не нужен  */
   padding-right: 17px;
 }
+/* #2
+ убрали отступ справа у последнего элемента
+ */
+.item:last-child {
+  padding-right: 0;
+}
+
 .item__link {
   text-decoration: none;
 }
+
 .item__link.active,
 .item__link:hover,
 .item__link:focus {
@@ -135,7 +156,6 @@
   transition: color ease 0.3c;
   
 }
-
 
 .h2 {
   padding: 32px;
@@ -152,16 +172,25 @@
 }
 .h2__text {}
 
-.story{
+.story {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
+  /* #2
+   теперь этот блок лежит в контейнере 940px
+   его элементы должны занять всю эту ширину
+   */
+  justify-content: space-between;
 }
 
 .story__description {
-  width: 24%;
-  /* убираем, уменьшаем контейнер */
-  /* padding-left: 212px; */
+  /* #2
+  этому элементу половинку ширины
+  */
+  max-width: 50%;
+  flex: 0 0 50%;
+  /*width: 24%;*/
 }
+
 .description1 {
   font-family: Open Sans;
   font-style: normal;
@@ -170,10 +199,6 @@
   line-height: 27px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  
-  /* убираем, уменьшаем контейнер */
-  /* padding-left: 111px; */
-  /* padding-right: 39px; */
 }
 
 .description2 {
@@ -184,57 +209,40 @@
   line-height: 23px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  
-  /* убираем, уменьшаем контейнер */
-  /* padding-left: 111px; */
-  /* padding-right: 59px; */
   padding-top: 5px;
 }
 
 .middle__img {
-  width: 30%;
+  /* #2
+  и этому элементу половинку ширины
+  */
+  max-width: 50%;
+  flex: 0 0 50%;
+  /*width: 30%;*/
   display: flex;
   padding-top: 20px;
   
 }
-/* дублирование стилей */
-/* .story__img__webuild {
-  padding-left: 10px;
-
-}
-.story__img__wemanage {
-  padding-left: 10px;
-} */
 
 .weplan__img {
-  /* убираем картинка должна встроиться по ширине блока обертки */
-  /* width: 125px; */
-  /* height: 220px; */
   width: 100%;
   max-width: 100%;
   padding-left: 20px;
 }
-/* дублирование стилей */
-/* .img__webuild {
-  width: 125px;
-  height: 220px;
-}
-.img__wemanage {
-  width: 125px;
-  height: 220px;
-} */
+
 .capabilities {
   padding-top: 35px;
 }
-.container2 {
-  margin: 0 325px;
-}
+
+/*.container2 {*/
+/*  margin: 0 325px;*/
+/*}*/
 
 .capabilities__top {
   display: flex;
   justify-content: space-between;
- 
 }
+
 .top1 {
   width: 35%;
   text-align: left;
@@ -247,6 +255,7 @@
   color: #48555B;
   text-transform: uppercase;
 }
+
 .top2 {
   width: 42%;
   font-family: Open Sans;
@@ -257,8 +266,8 @@
   align-items: center;
   letter-spacing: 0.2px;
   color: #48555B;
-
 }
+
 .btn1 {}
  
 .btn1__btn {
@@ -277,10 +286,9 @@
 }
 
 .capabilities__bottom {
-display: flex;
-padding: 60px 0 0 0 ;
-justify-content: space-between;
-
+  display: flex;
+  padding: 60px 0 0 0 ;
+  justify-content: space-between;
 }
 
 .block {
@@ -290,6 +298,7 @@ justify-content: space-between;
   padding-top: 10px;
   width: 33.33%;
 }
+
 .block__img {}
 
 .block__h3 {
@@ -314,12 +323,9 @@ justify-content: space-between;
   letter-spacing: 0.1875px;
   color: #48555B;
   padding-top: 10px;
-
-  }
-  
+}
 
 .intouch {}
-
 
 .background1 {
   display: flex;
@@ -330,10 +336,7 @@ justify-content: space-between;
   background-image: url(../img/bg.png);
   background-position: center;
   background-size: cover;
-  
 }
-
-
 
 .background1__h2 {
   text-align: center;
@@ -347,11 +350,12 @@ justify-content: space-between;
   width: 23vw;
   height: 26vh;
 }
+
 .background1__btn {
   text-align: center;
   height: 21vh;
-   
 }
+
 .btn2 {
   background-color: #00A4E5;
   font-family: Open Sans;
@@ -378,10 +382,9 @@ justify-content: space-between;
   justify-content: center;
   align-items: center;
   margin-top: -2px;
-
 }
-.content__h3 {
 
+.content__h3 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -391,13 +394,14 @@ justify-content: space-between;
   letter-spacing: 0.846154px;
   color: #FFFFFF;
   width: 15vw;
+}
 
-  }
 .content__input {
   height: 6vh;
   display: flex;
   align-items: center;
 }
+
 .email1 {
   height: 100%;
   font-family: Open Sans;
@@ -407,9 +411,7 @@ justify-content: space-between;
   line-height: 19px;
   letter-spacing: 0.07000000029802322px;
   text-align: left;
-  
 }
-
 
 .signup1 {
   background-color: #00A4E5;
@@ -437,11 +439,12 @@ justify-content: space-between;
   align-items: center;
   justify-content: space-around;
 }
+
 .content1__logo {
   color: #fff;
   margin-left: 13vw;
-  
 }
+
 .text1 {
   font-family: Open Sans;
   font-style: normal;
@@ -458,9 +461,7 @@ justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.logo1__logo {
- 
-}
+.logo1__logo {}
 
 .text2{
   font-family: Open Sans;
@@ -471,7 +472,6 @@ justify-content: space-between;
   align-items: center;
   letter-spacing: 0.85px;
   width: 17.5vw;
-
 }
 
 .content1__links {
@@ -487,12 +487,9 @@ justify-content: space-between;
   letter-spacing: 0.846154px;
   justify-content: space-around;
   width: 53vw;
-  
-  
-  }
-  .group1 {
-   
-  }
+}
+
+.group1 {}
 
 .group1__link :hover,
 .group1__link :focus {
@@ -504,51 +501,50 @@ justify-content: space-between;
   color: #fff;
 }
 
-  .group2 {
-    padding-top: 6vh;
-      }
+.group2 {
+  padding-top: 6vh;
+}
 
-  .group3 {
-    margin-left: 15px;
-    padding-top: 6vh;
-  }
+.group3 {
+  margin-left: 15px;
+  padding-top: 6vh;
+}
 
-    .group4 {
-    margin-left: ;
-    width: 17vw ;
-    font-weight: 400;
-  }
-  .footer__container {
-    max-width: 100%;
-    height: 15vh;
-    background: #171819;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: 0.846154px;
-    color: #FFFFFF;
-    text-align: center;
-    
+.group4 {
+  width: 17vw ;
+  font-weight: 400;
+}
 
-  }
-  .footer__text {
-    text-align: center;
-    padding-top: 7vh;
-  }
+.footer__container {
+  max-width: 100%;
+  height: 15vh;
+  background: #171819;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.846154px;
+  color: #FFFFFF;
+  text-align: center;
+}
 
-  .group5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 16vh
-  }
-  
-  .group5__icon {
-    width: 2vw;
-    
-  }
+.footer__text {
+  text-align: center;
+  padding-top: 7vh;
+}
+
+.group5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16vh
+}
+
+.group5__icon {
+  width: 2vw;
+
+}
 
 
 
