@@ -13,55 +13,36 @@
 
 </head>
 <body>
-<!-- #2
-http://prntscr.com/10ei18p - это на 1920px, фон должен заполнять всю ширину
-экрана, полоска под меню тоже на всю ширину. Для этого блок с фоном не должен
- лежать внутри контейнера.
--->
-<div class="header"><!-- #2 здесь стал фон -->
+
+<div class="header">
     <div class="container">
-        <!--<div class="background"> #2 здесь был фон -->
-            <div class="text">
-
-                <!-- #2
-                 здесь лучше ссылка вместо div, т.к. это логотип
-                 -->
-                 <a  class="text__logo" href="">
-                    <img src="./assets/img/terms_logo.png" alt="logo">
-                 </a>
-                
-                   
-                
-                <div class="text__center">
-                    <div class="main">
-                        <p>PARTNER WITH KONSTRUCT</p>
-                    </div>
-                    <div class="undermain">
-                        <p>An award-winning construction management firm</p>
-                    </div>
+        <div class="text">
+            <a class="text__logo" href="">
+                <img src="./assets/img/terms_logo.png" alt="logo">
+            </a>
+            <div class="text__center">
+                <div class="main">
+                    <p>PARTNER WITH KONSTRUCT</p>
                 </div>
-                <div class="text__bottom">
-                    <a class="text__link" href="#">SCROLL DOWN</a><!--эл-т блока bottom, блока нет такого?-->
+                <div class="undermain">
+                    <p>An award-winning construction management firm</p>
                 </div>
-
             </div>
-        <!--</div>-->
+            <div class="text__bottom">
+                <a class="text__link" href="#">SCROLL DOWN</a><!--эл-т блока bottom, блока нет такого?-->
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- #2 сюда добавим обертку и перенесем нижнюю рамку на нее,
- чтобы эта рамка тянулась на всю ширину экрана, а не только контейнера
-  (выйдет немного не по БЭМ)-->
-<div class="nav-wrap"><!-- #2 новый блок -->
+<div class="nav-wrap">
     <div class="container">
         <div class="nav">
 
             <a class="nav__logo" href="#">
-               <img class="logo__img" src="./assets/img/logo.png" alt="logo">
+                <img class="logo__img" src="./assets/img/logo.png" alt="logo">
             </a>
-            
-                <!-- #2 излишне -->
-            <!--<div class="nav__list">-->
+
             <ul class="nav__list">
                 <li class="item">
                     <a class="item__link" href="#">Home</a>
@@ -79,8 +60,6 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
                     <a class="item__link" href="#">Contact</a>
                 </li>
             </ul>
-            <!--</div>-->
-
         </div>
     </div>
 </div>
@@ -116,33 +95,29 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
     </div>
 
     <section class="capabilities">
-        <!-- #2
-        здесь тоже 940 ширины, второй контейнер не нужен,
-        уже есть на 83 строке
-        -->
-<!--        <div class="container2">-->
-            <div class="capabilities__top">
-                <div class="top1">
-                    <h2>Our capabilities</h2>
-                </div>
-                <div class="top2">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut laoreet dolore magna aliquam erat.</p>
+        <div class="capabilities__top">
+            <div class="top1">
+                <h2>Our capabilities</h2>
+            </div>
+            <div class="top2">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    ut laoreet dolore magna aliquam erat.</p>
 
-                </div>
-                <div class="btn1">
+            </div>
+            <div class="btn1">
 
-                    <a href="#">
-                        <button class="btn1__btn">All Services</button>
-                    </a>
-
-                </div>
+                <a href="#">
+                    <button class="btn1__btn">All Services</button>
+                </a>
 
             </div>
 
-            <div class="capabilities__bottom">
+        </div>
 
-                <div class="block">
+        <div class="capabilities__bottom">
+
+            <div class="block">
+                <div class="block__inner">
                     <div class="block__img">
                         <img src="./assets/img/bottom_block1.png" alt="image">
                     </div>
@@ -154,8 +129,10 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
                             tincidunt ut laoreet dolore magna aliquam erat.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="block">
+            <div class="block">
+                <div class="block__inner">
                     <div class="block__img">
                         <img src="./assets/img/bottom_block2.png" alt="image">
                     </div>
@@ -167,12 +144,11 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
                             tincidunt ut laoreet dolore magna aliquam erat.</p>
                     </div>
                 </div>
-                <!-- #2
-                у этого последнего блока нужно убрать лишний отступ
-                справа, чтобы он влез красиво в контейнер
-                -->
-                <div class="block">
-                    <div class="block">
+            </div>
+
+            <div class="block">
+                <div class="block__inner">
+                    <div class="block__img">
                         <img src="./assets/img/bottom_block3.png" alt="image">
                     </div>
                     <div class="block__h3">
@@ -183,21 +159,19 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
                             tincidunt ut laoreet dolore magna aliquam erat.</p>
                     </div>
                 </div>
-
-
             </div>
-<!--        </div>-->
+
+        </div>
 
     </section>
 
 
 </div>
 
-
+<!-- #3 http://prntscr.com/10frvbr  здесь и далее фон в контейнерах,
+ а должен быть на всю ширину экрана, исправить -->
 <div class="container">
     <div class="background1">
-        <!-- лучше фоном и дальше убрать absolute -->
-        <!-- <img class="intouch__img" src="./assets/img/bg.png" alt="image">-->
 
         <div class="background1__h2">
             <h2>Want to build something amazing?</h2>
@@ -281,23 +255,16 @@ http://prntscr.com/10ei18p - это на 1920px, фон должен запол�
 
                 </div>
                 <div class="group5">
-                      <a class="group5__icon" href="">
+                    <a class="group5__icon" href="">
                         <img class="icon" src="./assets/img/f.png" alt="icon">
-                      </a>
-                    
-                        <a class="group5__icon" href="">
-                          <img class="icon" src="./assets/img/twitter.png" alt="icon">
-                        </a>
-                    
-
-                        <a  class="group5__icon" href="">
-                          <img class="icon" src="./assets/img/G.png" alt="icon">
-                        </a>                   
-                    
-
+                    </a>
+                    <a class="group5__icon" href="">
+                        <img class="icon" src="./assets/img/twitter.png" alt="icon">
+                    </a>
+                    <a class="group5__icon" href="">
+                        <img class="icon" src="./assets/img/G.png" alt="icon">
+                    </a>
                 </div>
-
-
             </div>
 
 
