@@ -1,27 +1,17 @@
 * {
   box-sizing: border-box;
  }
-
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+ 
 /* #2
 1) решить проблему с шрифтом, сейчас не подключается
 2) http://prntscr.com/10ei6pg
 - основной контейнер в который вписывается контент
 940px
  */
-.container {
-  /* #2
-  меняем контейнер
-  */
-  /*width: 1468px;*/
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-/* #2
-фоновая картинка должна тянуться на всю ширину экрана,
-не должна быть внутри контейнера,
-переносим с background на header
- */
+
 .header {
   background-image: url("../img/header_img.svg");
   background-position: center;
@@ -38,6 +28,21 @@
 }
 */
 
+.container {
+  /* #2
+  меняем контейнер
+  */
+  /*width: 1468px;*/
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* #2
+фоновая картинка должна тянуться на всю ширину экрана,
+не должна быть внутри контейнера,
+переносим с background на header
+ */
+
 .text {
   display: flex;
   flex-direction: column;
@@ -48,7 +53,7 @@
   сюда удобно добавить внутренние отступы,
   чтобы внутренние элементы не прилипали к краям
   */
-  padding: 5vh 0;
+  padding: 7vh 0;
 }
 
 .text__logo {
@@ -63,7 +68,7 @@
 }
 
 .main {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 32px;
   line-height: 70px;
   letter-spacing: 5.7px;
@@ -114,20 +119,20 @@
    всю эту ширину
    */
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 5vh 0;
 
 }
 
 .nav__logo {
-  width: 80px;
-  height: 18px;
+  width: 5vw;
+  height: 4vh;
 }
 
 .nav__list {}
 
 .item {
   display: inline-block;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -158,9 +163,9 @@
 }
 
 .h2 {
-  padding: 32px;
+  padding: 4vh 0;
   text-align: center;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -192,7 +197,7 @@
 }
 
 .description1 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -202,14 +207,14 @@
 }
 
 .description2 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  padding-top: 5px;
+  padding-top: 10vh;
 }
 
 .middle__img {
@@ -220,7 +225,7 @@
   flex: 0 0 50%;
   /*width: 30%;*/
   display: flex;
-  padding-top: 20px;
+  padding-top: 3vh;
   
 }
 
@@ -231,7 +236,7 @@
 }
 
 .capabilities {
-  padding-top: 35px;
+  padding-top: 10vh;
 }
 
 /*.container2 {*/
@@ -246,7 +251,7 @@
 .top1 {
   width: 35%;
   text-align: left;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 13px;
@@ -258,7 +263,7 @@
 
 .top2 {
   width: 42%;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -271,7 +276,7 @@
 .btn1 {}
  
 .btn1__btn {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -287,22 +292,21 @@
 
 .capabilities__bottom {
   display: flex;
-  padding: 60px 0 0 0 ;
+  padding: 10vh 0 0 0 ;
   justify-content: space-between;
 }
 
 .block {
   border: 1px solid rgba(192,192,192,0.6);
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-top: 10px;
-  width: 33.33%;
+  margin-right: 1vw;
+  padding: 1vh 1vw;
+   width: 33.33%;
 }
 
 .block__img {}
 
 .block__h3 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -311,18 +315,21 @@
   color: #48555B;
   text-transform: uppercase;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 4vh;
 }
 
 .block__text {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 0.1875px;
   color: #48555B;
-  padding-top: 10px;
+  padding-top: 4vh;
+}
+.block:last-child {
+  margin-right: 0;
 }
 
 .intouch {}
@@ -340,7 +347,7 @@
 
 .background1__h2 {
   text-align: center;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -358,7 +365,7 @@
 
 .btn2 {
   background-color: #00A4E5;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -385,7 +392,7 @@
 }
 
 .content__h3 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -404,7 +411,7 @@
 
 .email1 {
   height: 100%;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -415,7 +422,7 @@
 
 .signup1 {
   background-color: #00A4E5;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -432,46 +439,46 @@
 
 .content1 {
   max-width: 100%;
-  height: 40vh;
+  height: 37vh;
   background-color: #141A20;
   display: flex;
-  padding-top: 20px;
+  padding-top: 1vh;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .content1__logo {
   color: #fff;
-  margin-left: 13vw;
+  
 }
 
 .text1 {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
   line-height: 15px;
   letter-spacing: 0.846154px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 5vh;
 }
 
 .logo1 {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 4vh;
 }
 
-.logo1__logo {}
+
 
 .text2{
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 19px;
   align-items: center;
   letter-spacing: 0.85px;
-  width: 17.5vw;
+  width: 15.5vw;
 }
 
 .content1__links {
@@ -485,8 +492,10 @@
   font-size: 9px;
   line-height: 25px;
   letter-spacing: 0.846154px;
-  justify-content: space-around;
-  width: 53vw;
+  justify-content: space-evenly;
+  max-width: 100%;
+  max-height: 100%;
+
 }
 
 .group1 {}
@@ -503,23 +512,33 @@
 
 .group2 {
   padding-top: 6vh;
+  margin-right: 2vw;
 }
 
+.group1 {
+  margin-right: 2vw;
+}
 .group3 {
-  margin-left: 15px;
+  margin-left: 1vw;
+  margin-right: 1vw;
   padding-top: 6vh;
+  margin-right: 2vw;
 }
 
 .group4 {
-  width: 17vw ;
+  width: 9vw ;
   font-weight: 400;
+  margin-right: 2vw;
+  line-height: 20px;
 }
+.group5. {}
+.icon {}
 
 .footer__container {
   max-width: 100%;
   height: 15vh;
   background: #171819;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -536,14 +555,20 @@
 
 .group5 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 16vh
+  height: 13vh;
+  margin-right: 2vw;
+
 }
 
-.group5__icon {
-  width: 2vw;
 
+.group5__icon {
+  width: 1vw;
+}
+
+.icon {
+  width: 5vw;
 }
 
 
